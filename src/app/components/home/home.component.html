@@ -1,0 +1,13 @@
+<div class="white-space row">
+    <app-nav-bar [subCategory]="eventSubCategory" (navEmit)="navData($event)"></app-nav-bar>
+    <div class="container">
+        <div class="tag">
+            <app-tags class="mg-b 2" (tagSelected)="selectTags($event)"></app-tags>
+            <app-paging [currPage]="curPage" [totalPage]="totPages" (outputPage)="pageChange($event)"></app-paging>
+        </div>
+        <div class="card">
+            <app-cards [allcard_data]="events"></app-cards>
+        </div>
+    </div>
+    <!-- <app-paging [currPage]="curPage" [totalPage]="totPages" (outputPage)="pageChange($event)"></app-paging> -->
+</div>

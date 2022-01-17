@@ -1,0 +1,54 @@
+
+.navbar {
+    
+    display:flex; 
+    flex-direction: row; 
+    /* margin-bottom: 3%; */
+    align-items: center;
+}
+.bars {
+    float: left;
+  text-align: center;
+  padding: 12px;
+  cursor: pointer;
+
+  text-decoration: none;
+  font-size: 17px;
+    color: orange;
+    margin-right: 5%;
+}
+.activebar {
+  float: left;
+text-align: center;
+padding: 12px;
+cursor: pointer;
+
+text-decoration: none;
+font-size: 17px;
+  color: black;
+  margin-right: 5%;
+}
+
+.imgSrc{
+  margin-right: 0.2rem;
+  height: 1.2rem;
+  
+}
+.subbars{
+  float: left;
+  text-align: center;
+  padding: 12px;
+  cursor: pointer;
+
+  text-decoration: none;
+  font-size: 15px;
+    /* color: orange; */
+    margin-right: 5%;
+}
+.first {
+  margin-left: 20%;
+}
+.bars:active
+{
+  color: black;
+}

@@ -1,0 +1,5 @@
+<div class="nav-margin" *ngFor="let tag of soArray">
+    <app-tag-item [tag]="tag" (event)="triggerTag($event)">
+    </app-tag-item>
+</div>
+<button (click)="showMore()" type="button" class="btn btn-success">{{soinfo}}</button>

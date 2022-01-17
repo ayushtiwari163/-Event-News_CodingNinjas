@@ -1,4 +1,3 @@
-
 .white-space {
     background-color: white;
     margin-left: 10%;
@@ -8,8 +7,17 @@
 }
 .heading {
     margin-left: 5%;
- 
 }
-.background {
-    background-color: darkblue;
+.card {
+    
+   width: 70vw;
+}
+.tag {
+    width: 30vw;
+}
+.temp {
+    border: solid;
+}
+.container {
+    display: flex;
 }

@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-lg-9 d-flex flex-row-reverse align-items-center">
+        <div>
+            <button *ngIf="totalPage !=currPage" class="btn btn-md ms-1 text-light"
+                style="background-color: {{ mainColor }}" (click)="nextPage()">
+                &gt;
+            </button>
+        </div>
+
+        <span> Page <input class="text-center" value="" style="width: 40px;" type="number" min="1" id="pageVal"
+                name="pageVal" placeholder="{{ currPage }}" (change)="onChange()">of {{ totalPage }}
+        </span>
+
+        <div>
+            <button *ngIf="currPage>1" class="btn btn-md me-1 text-light" style="background-color: {{ mainColor }}"
+                (click)="prevPage()">
+                &lt;
+            </button>
+        </div>
+
+
+    </div>
+</div>

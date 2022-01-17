@@ -1,0 +1,13 @@
+.tag{
+    cursor: pointer;
+    display: inline-block;
+    /* font-weight: 700; */
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #000000;
+        margin-bottom: 8px;
+        /* letter-spacing:  0.078rem; */
+       /* background-color: rgb(162, 158, 155); */
+       border-radius: 20px;
+       padding: 8px;
+}
