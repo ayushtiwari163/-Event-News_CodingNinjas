@@ -72,6 +72,7 @@ export class HomeComponent implements OnInit {
       this.curPage = (this.offSet / 20) + 1;
     }
     )
+
   }
 
   ngOnInit(): void {

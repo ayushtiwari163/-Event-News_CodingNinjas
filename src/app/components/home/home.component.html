@@ -3,11 +3,17 @@
     <div class="container">
         <div class="tag">
             <app-tags class="mg-b 2" (tagSelected)="selectTags($event)"></app-tags>
-            <app-paging [currPage]="curPage" [totalPage]="totPages" (outputPage)="pageChange($event)"></app-paging>
         </div>
         <div class="card">
             <app-cards [allcard_data]="events"></app-cards>
         </div>
     </div>
+    <p style="color: white;">Just for marging bottom</p>
+
     <!-- <app-paging [currPage]="curPage" [totalPage]="totPages" (outputPage)="pageChange($event)"></app-paging> -->
+    <app-paging [currPage]="curPage" [totalPage]="totPages" (outputPage)="pageChange($event)"></app-paging>
+    <p style="color: white;">Just for marging bottom</p>
+
 </div>
+<h1 style="color: darkblue;">Just for marging bottom</h1>
+<h1 style="color: darkblue;">Just for marging bottom</h1>

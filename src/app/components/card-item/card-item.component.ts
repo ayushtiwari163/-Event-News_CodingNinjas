@@ -14,7 +14,7 @@ export class CardItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // console.log(this.data);
+    console.log(this.data);
     if (this.data.registration_status !== "REGISTRATIONS_OPEN")
       this.resOpen = false;
     else

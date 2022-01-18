@@ -1,42 +1,51 @@
-<div class="card" style="">
-    <img class="card-img-top" src="{{data.cover_picture}}" alt="Card image cap">
-    <h5 class="card-body card-title">{{data.name}}</h5>
-    <ul class="list-group list-group-flush">
+<div class="card d-flex justify-content-between m-2 sm:w-50 xs:w-100">
+    <div>
+        <div class="card d-flex flex-column justify-content-between  p-2 h6">
+            <img class="card-img-top" src="{{data.cover_picture}}" alt="Card image cap">
+            <h5 class="card-body card-title">{{data.name}}</h5>
+            <ul class="list-group list-group-flush">
 
-        <li class="list-group-item"><b>Start Time :</b> {{data.start_time*1000 | date:"dd/MM/yyyy 'at' h:mma"}}
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <b>End Time :</b> {{data.end_time*1000 |date:"dd/MM/yyyy 'at' h:mma"}}
-        </li>
-        <li class="list-group-item"><b>Venue :</b> {{data.venue}}
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <b>Fees :</b> {{data.fees}}
-        </li>
+                <li class="list-group-item"><b>Start Time :</b> {{data.start_time*1000 | date:"dd/MM/yyyy 'at' h:mma"}}
+                    <br>
+                    <b>End Time :</b> {{data.end_time*1000 |date:"dd/MM/yyyy 'at' h:mma"}}
+                </li>
+                <li class="list-group-item"><b>Venue :</b> {{data.venue}}
+                    <br>
+                    <b>Fees :</b> {{data.fees}} {{data.currency}}
+                </li>
 
-        <li class="list-group-item">
-            <b>Description :</b>
-            {{data.short_desc}}
-        </li>
-        <li *ngIf="data.card_tags.length!==0" class="list-group-item">
-            Tag:
-            <div *ngFor="let tag of data.card_tags">
-                {{tag}}
-            </div>
-        </li>
-        <li>
-            <button *ngIf="data.registration_status!=='PAST'" type="button" class="btn"
-                [ngClass]="{'btn-outline-success' : resOpen,'btn-outline-danger':!resOpen}">
-                {{data.registration_status}}
-            </button>
-            <div>
-                <app-card-other-user *ngFor="let user of topUsers" imgSrc="{{user['image_url']}}"
-                    name="{{user['name']}}" otherUsers={{otherUsers}} regStatus={{regStatus}}></app-card-other-user>
-                <div *ngIf="otherUsers!==0" class="d-flex">
-                    <p class="registered-para">and <strong>{{otherUsers}}</strong> others
-                        <span *ngIf="regStatus=='PAST'"> participated.</span>
-                        <span *ngIf="regStatus!='PAST'">are participating.</span>
-                    </p>
-                </div>
-            </div>
-        </li>
-    </ul>
-</div>
+                <li class="list-group-item">
+                    <b>Description :</b>
+                    {{data.short_desc}}
+                </li>
+                <li *ngIf="data.card_tags.length!==0" class="list-group-item">
+                    Tag:
+                    <!-- <div *ngFor="let tag of data.card_tags"> -->
+                    <div class="d-flex justify-content-start">
+                        <span class="p-1 mx-1" style="background-color: #eee; font-size: 0.8rem;"
+                            *ngFor="let tag of data.card_tags;let i =index;">
+                            <span>{{tag}}</span>
+                        </span>
+                    </div>
+                    <!-- {{tag}} -->
+                    <!-- </div> -->
+                </li>
+                <li>
+                    <button *ngIf="data.registration_status!=='PAST'" type="button" class="btn"
+                        [ngClass]="{'btn-outline-success' : resOpen,'btn-outline-danger':!resOpen}">
+                        {{data.registration_status}}
+                    </button>
+                    <div>
+                        <app-card-other-user *ngFor="let user of topUsers" imgSrc="{{user['image_url']}}"
+                            name="{{user['name']}}" otherUsers={{otherUsers}} regStatus={{regStatus}}>
+                        </app-card-other-user>
+                        <div *ngIf="otherUsers!==0" class="d-flex">
+                            <p class="registered-para">and <strong>{{otherUsers}}</strong> others
+                                <span *ngIf="regStatus=='PAST'"> participated.</span>
+                                <span *ngIf="regStatus!='PAST'">are participating.</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>

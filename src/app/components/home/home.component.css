@@ -1,8 +1,8 @@
 .white-space {
     background-color: white;
-    margin-left: 10%;
+    margin-left: 7%;
     margin-top: 5%;
-    margin-right: 10%;
+    margin-right: 7%;
     
 }
 .heading {
@@ -10,10 +10,10 @@
 }
 .card {
     
-   width: 70vw;
+   width: 85%;
 }
 .tag {
-    width: 30vw;
+    width: 15%;
 }
 .temp {
     border: solid;
